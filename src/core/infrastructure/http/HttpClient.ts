@@ -13,7 +13,11 @@ export class HttpClient {
     }
 
     async get(url: string): Promise<any> {
-        return await this.http.get(url);
+        try {
+            return await this.http.get(url);
+        } catch (e) {
+            return setTimeout(this.get(url), 500);
+        }
     }
 
     async post(url: string, jsonBody: object = {}): Promise<any> {
