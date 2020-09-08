@@ -37,9 +37,9 @@ To run the tests
 I haven't tested it on ios because right now I don't have a Mac or an Iphone.
 
 # About Architecture:
-I have used an MVP (Model-View-Presenter) mixed up with Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) to have a scalable and reusable front end (You can re-use everything excepts the views if you want to change react for react native, vue, backbone, have a console interface, etc...) and it's super easy to test. I could have used any state managment kind of architecture (redux, context api, etc...) but I like this one because the application is not coupled by just one framework.
+I have used an MVP (Model-View-Presenter) mixed up with Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) to have a scalable and reusable front end (You can re-use everything excepts the views if you want to change react for react native, vue, backbone, have a console interface, etc...) and it's super easy to test. I could have used any state management kind of architecture (redux, context API, etc...) but I like this one because the application is not coupled by just one framework.
 
 # About Tests:
 I have tested the usecases and the presenters.
-Regarding the usecases tests, they are focused on collaboration, that's why the external parts of the application (like the HTTP layer) is mocked.
-Regarding the presenters tests: the presenter has all the logic of the view, leaving the a "dumb" view. This allows to just test the presenter, which is all the view logic without interacting with implementation (react components) which tends to change a lot.
+Regarding the use cases tests, they are focused on collaboration, that's why the external parts of the application (like the HTTP layer) are mocked.
+Regarding the presenter's tests: the presenter has all the logic of the view, leaving a "dumb" view. This allows us to just test the presenter, which is all the view logic without interacting with implementation (react components) which tends to change a lot.
